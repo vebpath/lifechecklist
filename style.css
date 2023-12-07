@@ -1,0 +1,105 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root{
+  --primaryColor: #2ecc71;
+  --secondaryColor: #f1f2f6;
+}
+
+body{
+  background-color: var(--secondaryColor);
+}
+
+header{
+  background-color: white;
+  padding: 30px 60px;
+}
+
+header h1{
+  font-family: cursive;
+}
+
+.wrapper{
+  text-align: center;
+  padding: 40px;
+  margin: 10px auto;
+  width: 90%;
+  background-color: white;
+}
+
+main{
+  width: 90%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 8px;
+}
+
+section{
+  position: relative;
+  height: 90px;
+}
+
+label{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  padding-left: 60px;
+}
+
+input{
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  accent-color: white;
+}
+
+input:checked+label{
+  background-color: var(--primaryColor);
+  color: white;
+}
+
+.progress{
+  width: 100%;
+  height: 50px;
+  background-color: var(--secondaryColor);
+  border-radius: 4px;
+  margin: 10px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.bar{
+  position: absolute;
+  background-color: var(--primaryColor);
+  height: 100%;
+  left: 0;
+  width: 0%;
+}
+
+@media(width <= 1000px){
+  main{
+    width: 100%;
+    grid-template-columns: auto auto;
+  }
+  .wrapper{
+    width: 100%;
+  }
+  @media(width<=800px){
+    main{
+      grid-template-columns: auto;
+    }
+  }
+}
